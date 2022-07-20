@@ -73,6 +73,7 @@ dev.build-local:
 	mkdir -p bin/
 	go build -o bin/ ./cmd/coordinator
 	go build -buildmode=exe -o bin/ ./cmd/worker
+	cd web-temp && npm run build
 
 dev.run: dev.build-local
 	./bin/coordinator --v=5 &
