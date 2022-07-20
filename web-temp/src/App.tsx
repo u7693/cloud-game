@@ -1,9 +1,18 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
+import { useWebSocket } from "./hooks/useWebSocket";
 
-function App() {
+export const App = () => {
   const [count, setCount] = useState(0);
+
+  const socket = useWebSocket({
+    roomId: "",
+    wid: "",
+    zone: "",
+  });
+
+  console.log(socket);
 
   return (
     <div className="App">
@@ -29,6 +38,4 @@ function App() {
       </p>
     </div>
   );
-}
-
-export default App;
+};

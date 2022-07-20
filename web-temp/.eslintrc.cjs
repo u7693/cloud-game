@@ -36,7 +36,11 @@ module.exports = {
     }],
     "no-void": ["error", {
       allowAsStatement: true
-    }]
+    }],
+    "no-unused-expressions": [
+      "error", 
+      { "allowShortCircuit": false, "allowTernary": false }
+    ],
   },
   settings: {
     "import/resolver": {
